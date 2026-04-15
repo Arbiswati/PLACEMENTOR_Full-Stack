@@ -3,7 +3,7 @@ export default function getGuidance({ skills = "", interest = "", goal = "" }) {
   const goalLower = goal?.toLowerCase() || "";
   const interestLower = interest?.toLowerCase() || "";
 
-  // 🔹 WEB / FRONTEND
+  // WEB / FRONTEND
   if (goalLower.includes("web") || goalLower.includes("frontend")) {
     return {
       advice: `Since you know ${skills}, learn React and Tailwind.`,
@@ -12,7 +12,7 @@ export default function getGuidance({ skills = "", interest = "", goal = "" }) {
     };
   }
 
-  // 🔹 BACKEND
+  // BACKEND
   if (goalLower.includes("backend")) {
     return {
       advice: `Focus on Node.js, Express, and databases.`,
@@ -21,7 +21,7 @@ export default function getGuidance({ skills = "", interest = "", goal = "" }) {
     };
   }
 
-  // 🔹 DATA
+  // DATA
   if (goalLower.includes("data") || interestLower.includes("data")) {
     return {
       advice: `Learn Python, SQL, and data visualization.`,
@@ -30,7 +30,7 @@ export default function getGuidance({ skills = "", interest = "", goal = "" }) {
     };
   }
 
-  // 🔹 AI / ML
+  // AI / ML
   if (goalLower.includes("ai") || goalLower.includes("machine learning")) {
     return {
       advice: `Start with Python, ML basics, and projects.`,
@@ -39,7 +39,7 @@ export default function getGuidance({ skills = "", interest = "", goal = "" }) {
     };
   }
 
-  // 🔹 DEFAULT (WORKS FOR EVERYTHING ELSE ✅)
+  // DEFAULT 
   return {
     advice: `Based on your interest in ${interest}, start with fundamentals and build projects.`,
     steps: ["Learn basics", "Practice daily", "Build portfolio"],
